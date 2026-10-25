@@ -22,15 +22,17 @@ concurrency:
 
 jobs:
   update-feed:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
+          ref: main
+          fetch-depth: 0
           persist-credentials: true
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.10'
       - name: Install dependencies
@@ -46,7 +48,8 @@ jobs:
           git add feed.xml
           if ! git diff --cached --quiet; then
             git commit -m 'Update ARC Raiders RSS feed'
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           else
             echo 'No new articles. Nothing to commit.'
           fi
@@ -62,7 +65,7 @@ jobs:
 
   deploy:
     needs: update-feed
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
       contents: read
