@@ -6,7 +6,7 @@ from unittest.mock import Mock
 import xml.etree.ElementTree as ET
 
 from bs4 import BeautifulSoup
-from update_feed import (Article, CONTENT_NS, MEDIA_NS, article_url, date_from_text,
+from update_feed import (Article, CONTENT_NS, DC_NS, MEDIA_NS, article_url, date_from_text,
                          article_metadata, listing_articles, old_articles, render, update)
 
 HTML = '''<html><body><nav><a href="/news/">News</a></nav><main>
@@ -19,6 +19,39 @@ HTML = '''<html><body><nav><a href="/news/">News</a></nav><main>
 </main></body></html>'''
 
 class NewsTest(unittest.TestCase):
+    def test_each_item_identifies_its_linked_website(self):
+        links = [
+            ('https://arcraiders.com/news/new-event', 'arcraiders.com'),
+            ('https://steamstore-a.akamaihd.net/news/externalpost/123', 'store.steampowered.com'),
+            ('https://steamcommunity.com/games/123/announcements/detail/456', 'store.steampowered.com'),
+            ('https://store.steampowered.com/news/app/123/view/456', 'store.steampowered.com'),
+            ('https://arcraiderscommunity.com/intel/report-1', 'arcraiderscommunity.com'),
+        ]
+        articles = [Article(url, 'Article headline', datetime(2026, 10, 20, tzinfo=timezone.utc))
+                    for url, _ in links]
+        items = render(articles).findall('./channel/item')
+        self.assertEqual([i.findtext('{%s}creator' % DC_NS) for i in items],
+                         [domain for _, domain in links])
+
+    def test_existing_feed_gets_sources_without_new_articles(self):
+        fake = Mock()
+        fake.get.return_value.text = HTML
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'feed.xml'
+            update(path, fake)
+            before = old_articles(path)
+            tree = ET.parse(path)
+            for item in tree.findall('./channel/item'):
+                item.remove(item.find('{%s}creator' % DC_NS))
+            tree.write(path, encoding='utf-8', xml_declaration=True)
+            self.assertEqual(update(path, fake), (0, 2))
+            self.assertEqual(old_articles(path), before)
+            items = ET.parse(path).findall('./channel/item')
+            self.assertTrue(all(i.findtext('{%s}creator' % DC_NS) for i in items))
+            contents = path.read_bytes()
+            update(path, fake)
+            self.assertEqual(path.read_bytes(), contents)
+
     def test_realistic_cards_keep_their_own_metadata(self):
         source = Path(__file__).with_name('fixtures').joinpath('news-cards.html').read_text()
         items = listing_articles(BeautifulSoup(source, 'html.parser'))

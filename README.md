@@ -7,6 +7,10 @@ community site, Steam updates, and the community's own news reports. Entries
 include card artwork or, if necessary, the article's Open Graph image.
 Images are exposed via Media RSS (`media:content`) and embedded HTML in both
 `description` and `content:encoded` for broad RSS-reader compatibility.
+Each entry identifies its linked website in `dc:creator` author metadata.
+Steam links use `store.steampowered.com`, including Steam CDN redirects.
+RSS readers control where this label appears; some always show the shared feed
+name beneath headlines and cannot replace it with an entry's author.
 
 Subscribe (once GitHub Pages is enabled):
 https://cptcamembert.github.io/arc-raiders-rss/feed.xml
