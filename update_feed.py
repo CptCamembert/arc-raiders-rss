@@ -23,11 +23,9 @@ SOURCE = "https://arcraiderscommunity.com/news/"
 FEED_URL = "https://cptcamembert.github.io/arc-raiders-rss/feed.xml"
 MEDIA_NS = "http://search.yahoo.com/mrss/"
 CONTENT_NS = "http://purl.org/rss/1.0/modules/content/"
-DC_NS = "http://purl.org/dc/elements/1.1/"
 MAX_ITEMS = 100
 ET.register_namespace("media", MEDIA_NS)
 ET.register_namespace("content", CONTENT_NS)
-ET.register_namespace("dc", DC_NS)
 LOG = logging.getLogger(__name__)
 
 @dataclass(frozen=True)
@@ -292,18 +290,10 @@ def old_articles(path: Path) -> list[Article]:
     return articles
 
 
-def source_domain(url: str) -> str:
-    """Identify the linked publisher, including Steam's news redirect host."""
-    host = (urlsplit(url).hostname or "").removeprefix("www.")
-    if host in ("store.steampowered.com", "steamcommunity.com", "steamstore-a.akamaihd.net"):
-        return "store.steampowered.com"
-    return host
-
-
 def render(articles: list[Article]) -> ET.ElementTree:
     root = ET.Element("rss", {"version": "2.0"})
     ch = ET.SubElement(root, "channel")
-    for key, value in (("title", "ARC Raiders News (mit Bildern)"), ("link", SOURCE),
+    for key, value in (("title", "ARC Raiders News"), ("link", SOURCE),
                        ("description", "Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern."),
                        ("language", "en"), ("ttl", "30")):
         ET.SubElement(ch, key).text = value
@@ -314,7 +304,6 @@ def render(articles: list[Article]) -> ET.ElementTree:
         ET.SubElement(item, "link").text = a.url
         ET.SubElement(item, "guid", {"isPermaLink": "true"}).text = a.url
         ET.SubElement(item, "pubDate").text = format_datetime(a.published, usegmt=True)
-        ET.SubElement(item, "{%s}creator" % DC_NS).text = source_domain(a.url)
         if a.image:
             body = '<p><img src="%s" alt="" /></p>' % html.escape(a.image, quote=True)
             if a.summary:
@@ -369,12 +358,8 @@ def update(path: Path, session: requests.Session | None = None) -> tuple[int, in
         if image or (summary and not a.summary):
             entries[a.url] = replace(a, summary=a.summary or summary, image=a.image or image)
     ordered = sorted(entries.values(), key=lambda x: (x.published, x.url), reverse=True)[:MAX_ITEMS]
-    # Regenerate older feeds once to add source labels even without new articles.
-    sources_current = path.exists() and all(
-        item.findtext("{%s}creator" % DC_NS) == source_domain(item.findtext("link") or "")
-        for item in ET.parse(path).findall("./channel/item")
-    )
-    if ordered == old and sources_current:
+    title_current = path.exists() and ET.parse(path).findtext('./channel/title') == 'ARC Raiders News'
+    if ordered == old and title_current:
         LOG.info("No changes; existing RSS retained (%d articles)", len(old))
         return 0, len(old)
     if not ordered:
