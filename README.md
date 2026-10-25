@@ -27,6 +27,11 @@ Each run tests the parser before fetching news. It merges articles by permanent 
 thumbnails from article metadata, and commits a new feed only on changes. It then publishes `feed.xml` through
 GitHub Pages, including on runs without new articles.
 If parsing or fetching the listing fails, it leaves the existing feed intact.
+Only article cards in the news content are included; navigation, tactical maps,
+and email-protection links are excluded. Updates also remove those invalid entries
+from older feeds and replace artwork that an earlier parser copied from a neighbouring
+card. Shared site backgrounds and social preview images are omitted; articles without
+card artwork use article metadata or an image inside the article when available.
 Scheduled runs can be delayed, and GitHub may pause schedules after 60 days
 of public repository inactivity.
 

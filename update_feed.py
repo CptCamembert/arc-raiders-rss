@@ -72,7 +72,10 @@ def article_url(href: str) -> str:
     if host in ("store.steampowered.com", "steamcommunity.com", "steamstore-a.akamaihd.net"):
         return url if ("news" in p.path or "announcements" in p.path) else ""
     if host == "arcraiderscommunity.com" and p.path not in ("/", "/news"):
-        if any(p.path.startswith(prefix) for prefix in ("/wiki", "/maps", "/privacy", "/support", "/looking-for-group")):
+        if any(p.path.startswith(prefix) for prefix in (
+            "/wiki", "/map", "/privacy", "/support", "/looking-for-group",
+            "/cdn-cgi", "/contact", "/about", "/terms", "/wp-content", "/img",
+        )):
             return ""
         return url
     return ""
@@ -85,6 +88,8 @@ def image_url(value: str, base: str = SOURCE) -> str:
     parsed = urlsplit(candidate)
     if parsed.scheme not in ("http", "https") or not parsed.netloc:
         return ""
+    if parsed.path.lower().endswith(("/bg.jpg", "/arc-raiders-social.png")):
+        return ""
     return urlunsplit(("https", parsed.netloc.lower(), parsed.path, parsed.query, ""))
 
 
@@ -93,7 +98,7 @@ def get_image(node: Tag | BeautifulSoup, base: str = SOURCE) -> str:
         for key in ("data-src", "data-original", "data-lazy-src", "src", "data-srcset", "srcset"):
             value = tag.get(key)
             if value:
-                first = str(value).split(",")[0].strip()
+                first = str(value).split(",")[0].strip() if "srcset" in key else str(value)
                 url = image_url(first, base)
                 if url:
                     return url
@@ -132,22 +137,25 @@ def date_from_text(value: str, now: datetime | None = None) -> datetime | None:
 
 
 def card_container(link: Tag) -> Tag:
-    """Find the smallest ancestor that contains card artwork and a heading."""
+    """Keep metadata inside one card, never a grid of neighbouring articles."""
+    enclosing = link.find_parent(["article", "li"])
+    if enclosing and len(enclosing.find_all(re.compile(r"^h[2-5]$"))) == 1:
+        return enclosing
+    if link.find(re.compile(r"^h[2-5]$")):
+        return link
     node = link
-    fallback = link
     for _ in range(5):
         if not isinstance(node.parent, Tag):
             break
         node = node.parent
-        if node.name in ("main", "body", "section"):
+        if node.name in ("main", "body", "section", "nav", "footer"):
             break
-        if node.name in ("article", "li"):
+        headings = node.find_all(re.compile(r"^h[2-5]$"))
+        if len(headings) > 1:
+            break
+        if headings:
             return node
-        if node.find(re.compile(r"^h[2-5]$")) and node.find("img"):
-            return node
-        if node.find(re.compile(r"^h[2-5]$")):
-            fallback = node
-    return fallback
+    return link
 
 
 def card_title(link: Tag, card: Tag) -> str:
@@ -162,6 +170,13 @@ def read_card(link: Tag, now: datetime) -> Article | None:
     if not url:
         return None
     card = card_container(link)
+    heading = card.find(re.compile(r"^h[2-5]$"))
+    if heading is None:
+        return None
+    # A sibling link in an excerpt is not the card's article destination.
+    primary_link = heading.find("a", href=True) or card.find("a", href=True)
+    if card is not link and primary_link is not link:
+        return None
     title = card_title(link, card)
     if not title or len(title) < 8 or title.lower().startswith(("all articles", "read more", "read article", "arcraiders.com")):
         return None
@@ -181,23 +196,26 @@ def read_card(link: Tag, now: datetime) -> Article | None:
 
 def listing_articles(soup: BeautifulSoup, now: datetime | None = None) -> list[Article]:
     now = now or datetime.now(timezone.utc)
-    main = soup.find("main") or soup
+    main = soup.find("main")
+    if main is None:
+        return []
     # Keep only links inside the two news sections, excluding navigation/footer.
     headings = [h for h in main.find_all("h2") if
                 any(s in h.get_text(" ", strip=True).lower() for s in ("from embark", "community transmissions"))]
+    candidates = [a for a in main.select("a[href]")
+                  if not a.find_parent(["nav", "footer", "aside"])]
     if not headings:
         # Some versions use a different section title. Article-shaped cards are a safe fallback.
-        anchors = [a for a in main.select("a[href]")
+        anchors = [a for a in candidates
                    if a.find(re.compile(r"^h[2-5]$"))
                    or (a.find_parent("article") and a.find_parent("article").find(re.compile(r"^h[2-5]$")))]
     else:
         anchors = []
         for heading in headings:
-            for item in heading.next_elements:
-                if isinstance(item, Tag) and item.name == "h2":
-                    break
-                if isinstance(item, Tag) and item.name == "a" and item.has_attr("href"):
-                    anchors.append(item)
+            section = heading.find_parent("section")
+            anchors.extend(a for a in candidates
+                           if a.find_previous("h2") is heading
+                           and (section is None or a.find_parent("section") is section))
     output = {}
     for a in anchors:
         item = read_card(a, now)
@@ -217,7 +235,9 @@ def article_metadata(session: requests.Session, url: str) -> tuple[str, str, dat
             if image:
                 break
     if not image:
-        image = get_image(soup.find("article") or soup, url)
+        article = soup.find("article") or soup.select_one(".payload-richtext") or soup.find("main")
+        if article is not None:
+            image = get_image(article, url)
     for selector in ("meta[property='og:description']", "meta[name='description']"):
         tag = soup.select_one(selector)
         if tag:
@@ -300,17 +320,28 @@ def render(articles: list[Article]) -> ET.ElementTree:
 
 def update(path: Path, session: requests.Session | None = None) -> tuple[int, int]:
     old = old_articles(path)
-    entries = {a.url: a for a in old}
+    entries = {a.url: replace(a, image=image_url(a.image))
+               for a in old if article_url(a.url)}
     session = session or session_factory()
     discovered = listing_articles(fetch_html(session, SOURCE))
     if not discovered:
         raise RuntimeError("No news cards found on the community site; refusing to alter RSS")
+    # Old parser versions copied the first grid image onto unrelated articles.
+    # Keep that artwork only on the cards that actually own it.
+    owners: dict[str, set[str]] = {}
+    for card in discovered:
+        if card.image:
+            owners.setdefault(card.image, set()).add(card.url)
+    entries = {url: replace(a, image="")
+               if a.image in owners and url not in owners[a.image] else a
+               for url, a in entries.items()}
     added = 0
     for card in discovered:
         prior = entries.get(card.url)
         if prior:
-            entries[card.url] = replace(prior, summary=prior.summary or card.summary,
-                                        image=prior.image or card.image)
+            entries[card.url] = replace(prior, title=card.title,
+                                        summary=card.summary or prior.summary,
+                                        image=card.image or prior.image)
         else:
             entries[card.url] = card
             added += 1
