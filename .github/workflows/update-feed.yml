@@ -1,0 +1,79 @@
+name: Update ARC Raiders RSS
+
+on:
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'update_feed.py'
+      - 'requirements.txt'
+      - 'tests/**'
+      - 'feed.xml'
+      - '.github/workflows/update-feed.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-arc-raiders-rss
+  cancel-in-progress: false
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run offline parser tests
+        run: python -m unittest discover -s tests -v
+      - name: Update RSS feed
+        run: python update_feed.py
+      - name: Commit and publish only if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add feed.xml
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update ARC Raiders RSS feed'
+            git push
+          else
+            echo 'No new articles. Nothing to commit.'
+          fi
+      - name: Prepare public feed
+        run: |
+          mkdir -p _site
+          cp feed.xml _site/feed.xml
+          touch _site/.nojekyll
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: update-feed
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy feed
+        id: deployment
+        uses: actions/deploy-pages@v4
