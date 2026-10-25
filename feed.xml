@@ -1,17 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
     <title>ARC Raiders News (mit Bildern)</title>
     <link>https://arcraiderscommunity.com/news/</link>
     <description>Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern.</description>
     <language>en</language>
     <ttl>30</ttl>
-    <lastBuildDate>Sun, 25 Oct 2026 10:45:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 10:50:25 GMT</lastBuildDate>
     <item>
       <title>Store Update 2.2.0</title>
       <link>https://arcraiders.com/news/store-update-2-2-0</link>
       <guid isPermaLink="true">https://arcraiders.com/news/store-update-2-2-0</guid>
       <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a1fe0a95fcfdbcc2dc9b09f7d58f27c394d6b342.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.2 is rolling out right now with the Wreck Set and a number of fixes. Make sure to restart your game to download. The PvE Beta test has…&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a1fe0a95fcfdbcc2dc9b09f7d58f27c394d6b342.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a1fe0a95fcfdbcc2dc9b09f7d58f27c394d6b342.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.2 is rolling out right now with the Wreck Set and a number of fixes. Make sure to restart your game to download. The PvE Beta test has…&lt;/p&gt;</content:encoded>
@@ -21,6 +22,7 @@
       <link>https://arcraiders.com/news/speranza-security-recruitment</link>
       <guid isPermaLink="true">https://arcraiders.com/news/speranza-security-recruitment</guid>
       <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f4380d6502cbb415b231664d9a6ff652a183c14c.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Speranza Security is recruiting voices for a new Gondola extraction operator.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f4380d6502cbb415b231664d9a6ff652a183c14c.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f4380d6502cbb415b231664d9a6ff652a183c14c.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Speranza Security is recruiting voices for a new Gondola extraction operator.&lt;/p&gt;</content:encoded>
@@ -30,6 +32,7 @@
       <link>https://arcraiders.com/news/pve-test-thanks-for-playing</link>
       <guid isPermaLink="true">https://arcraiders.com/news/pve-test-thanks-for-playing</guid>
       <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a103335d5f566108e2479ed119644071f90cb117.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The limited-time PvE matchmaking toggle test has ended - we want to thank everyone that came to take part and who provided us with valuable data and insights.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a103335d5f566108e2479ed119644071f90cb117.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a103335d5f566108e2479ed119644071f90cb117.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The limited-time PvE matchmaking toggle test has ended - we want to thank everyone that came to take part and who provided us with valuable data and insights.&lt;/p&gt;</content:encoded>
@@ -39,6 +42,7 @@
       <link>https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706680764</link>
       <guid isPermaLink="true">https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706680764</guid>
       <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>store.steampowered.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! We’re rolling out a hotfix right now to address several instances that allowed players to access locked rooms and duplicate items. A big thank you to everyone who reported…&lt;/p&gt;</description>
       <media:content url="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! We’re rolling out a hotfix right now to address several instances that allowed players to access locked rooms and duplicate items. A big thank you to everyone who reported…&lt;/p&gt;</content:encoded>
@@ -48,6 +52,7 @@
       <link>https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932855</link>
       <guid isPermaLink="true">https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932855</guid>
       <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>store.steampowered.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! We are now deploying a hotfix to address a few issues that popped up after yesterday&amp;#x27;s update. Please restart your game to download! - Fixed an issue where weapon…&lt;/p&gt;</description>
       <media:content url="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/74763863e586fc3f30181df19963882902ed327f.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! We are now deploying a hotfix to address a few issues that popped up after yesterday&amp;#x27;s update. Please restart your game to download! - Fixed an issue where weapon…&lt;/p&gt;</content:encoded>
@@ -57,6 +62,7 @@
       <link>https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067928872</link>
       <guid isPermaLink="true">https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067928872</guid>
       <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>store.steampowered.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/616f88af2ae6d6c84d3203beb3ab0e9802575eb1.jpg" alt="" /&gt;&lt;/p&gt;&lt;p&gt;An unprecedented disruption has drawn dangers to the Rust Belt unlike anything we’ve seen before. Raiders forge a way to the icy region of Pendola Pass in a last-ditch attempt…&lt;/p&gt;</description>
       <media:content url="https://clan.akamai.steamstatic.com/images/41624047/616f88af2ae6d6c84d3203beb3ab0e9802575eb1.jpg" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://clan.akamai.steamstatic.com/images/41624047/616f88af2ae6d6c84d3203beb3ab0e9802575eb1.jpg" alt="" /&gt;&lt;/p&gt;&lt;p&gt;An unprecedented disruption has drawn dangers to the Rust Belt unlike anything we’ve seen before. Raiders forge a way to the icy region of Pendola Pass in a last-ditch attempt…&lt;/p&gt;</content:encoded>
@@ -66,6 +72,7 @@
       <link>https://arcraiders.com/news/frozen-trail-photo-competition</link>
       <guid isPermaLink="true">https://arcraiders.com/news/frozen-trail-photo-competition</guid>
       <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/3cdc78a8338f4dd9ba35371cebb3cd3103d95296.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Capture the horror of the Frigate, the belly of the Emperor, or the snowstorms of Pendola Pass! Selfies are welcome, encouraged even.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/3cdc78a8338f4dd9ba35371cebb3cd3103d95296.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/3cdc78a8338f4dd9ba35371cebb3cd3103d95296.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Capture the horror of the Frigate, the belly of the Emperor, or the snowstorms of Pendola Pass! Selfies are welcome, encouraged even.&lt;/p&gt;</content:encoded>
@@ -75,6 +82,7 @@
       <link>https://arcraiders.com/news/store-update-2-1-0</link>
       <guid isPermaLink="true">https://arcraiders.com/news/store-update-2-1-0</guid>
       <pubDate>Tue, 13 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/b94955d309ed8f1ae3abb3f16758e9476aecd360.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.1 is going live right now and marks the start of the PvE toggle Beta Test! We know that the announcement of this highly requested feature has sparked…&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/b94955d309ed8f1ae3abb3f16758e9476aecd360.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/b94955d309ed8f1ae3abb3f16758e9476aecd360.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.1 is going live right now and marks the start of the PvE toggle Beta Test! We know that the announcement of this highly requested feature has sparked…&lt;/p&gt;</content:encoded>
@@ -84,6 +92,7 @@
       <link>https://arcraiders.com/news/trials-season-6</link>
       <guid isPermaLink="true">https://arcraiders.com/news/trials-season-6</guid>
       <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a506c6ef93ada0dd2b232b1e9a4251d8baa558a6.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;With the launch of Frozen Tail, Trials Season 6 has begun! As Raiders push into Pendola Pass, uncovering new threats and mysterious ARC technology, Speranza has never needed more support.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a506c6ef93ada0dd2b232b1e9a4251d8baa558a6.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/a506c6ef93ada0dd2b232b1e9a4251d8baa558a6.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;With the launch of Frozen Tail, Trials Season 6 has begun! As Raiders push into Pendola Pass, uncovering new threats and mysterious ARC technology, Speranza has never needed more support.&lt;/p&gt;</content:encoded>
@@ -93,6 +102,7 @@
       <link>https://arcraiders.com/news/pve-toggle-what-to-know</link>
       <guid isPermaLink="true">https://arcraiders.com/news/pve-toggle-what-to-know</guid>
       <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/68c697f4a15b25e819cfadae4738c1621b21e10f.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders, . From October 13 (11:00 CEST) - 20 (11:00 CEST), we will be testing a PvE matchmaking toggle in ARC Raiders. Back in September, we gave some general info about…&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/68c697f4a15b25e819cfadae4738c1621b21e10f.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/68c697f4a15b25e819cfadae4738c1621b21e10f.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders, . From October 13 (11:00 CEST) - 20 (11:00 CEST), we will be testing a PvE matchmaking toggle in ARC Raiders. Back in September, we gave some general info about…&lt;/p&gt;</content:encoded>
@@ -102,6 +112,7 @@
       <link>https://arcraiders.com/news/frozen-trail-is-live</link>
       <guid isPermaLink="true">https://arcraiders.com/news/frozen-trail-is-live</guid>
       <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f3157525ddaf5115b0eb9484b90563652717090d.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The Frozen Trail update is now live! Update your game and take your first frosted steps upon Pendola Pass.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f3157525ddaf5115b0eb9484b90563652717090d.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/f3157525ddaf5115b0eb9484b90563652717090d.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The Frozen Trail update is now live! Update your game and take your first frosted steps upon Pendola Pass.&lt;/p&gt;</content:encoded>
@@ -111,6 +122,7 @@
       <link>https://arcraiders.com/news/frozen-trail-2-0-update</link>
       <guid isPermaLink="true">https://arcraiders.com/news/frozen-trail-2-0-update</guid>
       <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/6f89a3e2-ab93-ARC-Raiders_Steam_EventHeader_FrozenTrail_1920x622-1024x332.jpg" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Frozen Trail is our biggest update since launch, packed with new features, fresh challenges, and a long list of fixes and improvements.&lt;/p&gt;</description>
       <media:content url="https://assets.arcraiders.com/media/6f89a3e2-ab93-ARC-Raiders_Steam_EventHeader_FrozenTrail_1920x622-1024x332.jpg" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/6f89a3e2-ab93-ARC-Raiders_Steam_EventHeader_FrozenTrail_1920x622-1024x332.jpg" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Frozen Trail is our biggest update since launch, packed with new features, fresh challenges, and a long list of fixes and improvements.&lt;/p&gt;</content:encoded>
@@ -120,6 +132,7 @@
       <link>https://arcraiders.com/news/collector-set-dlc</link>
       <guid isPermaLink="true">https://arcraiders.com/news/collector-set-dlc</guid>
       <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ff416164d34179f6d911b4295901c67d2af855b.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The limited-time PvE matchmaking toggle test has ended - we want to thank everyone that came to take part and who provided us with valuable data and insights.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ff416164d34179f6d911b4295901c67d2af855b.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ff416164d34179f6d911b4295901c67d2af855b.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The limited-time PvE matchmaking toggle test has ended - we want to thank everyone that came to take part and who provided us with valuable data and insights.&lt;/p&gt;</content:encoded>
@@ -129,6 +142,7 @@
       <link>https://arcraiders.com/news/celeste-capture-upgrade</link>
       <guid isPermaLink="true">https://arcraiders.com/news/celeste-capture-upgrade</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/f66d8559-3832-ArcRaiders_ScreenShot_16x9_Celeste-02-1024x576.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.&lt;/p&gt;</description>
       <media:content url="https://assets.arcraiders.com/media/f66d8559-3832-ArcRaiders_ScreenShot_16x9_Celeste-02-1024x576.png" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/f66d8559-3832-ArcRaiders_ScreenShot_16x9_Celeste-02-1024x576.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.&lt;/p&gt;</content:encoded>
@@ -138,6 +152,7 @@
       <link>https://arcraiders.com/news/play-for-free-weekend</link>
       <guid isPermaLink="true">https://arcraiders.com/news/play-for-free-weekend</guid>
       <pubDate>Fri, 02 Oct 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiders.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/0cbec512-eba2-ArcRaiders_FreeWeekend_Endslate_16-9_ForEmbark-1024x576.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.&lt;/p&gt;</description>
       <media:content url="https://assets.arcraiders.com/media/0cbec512-eba2-ArcRaiders_FreeWeekend_Endslate_16-9_ForEmbark-1024x576.png" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://assets.arcraiders.com/media/0cbec512-eba2-ArcRaiders_FreeWeekend_Endslate_16-9_ForEmbark-1024x576.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.&lt;/p&gt;</content:encoded>
@@ -147,6 +162,7 @@
       <link>https://arcraiderscommunity.com/transmission-riven-tides-field-report</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/transmission-riven-tides-field-report</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/riven-01-hotel.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The coastal map up close — the airborne ARC Turbine, the harbour approach, and the 1.26.0 balance pass.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/img/riven-01-hotel.png" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/riven-01-hotel.png" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The coastal map up close — the airborne ARC Turbine, the harbour approach, and the 1.26.0 balance pass.&lt;/p&gt;</content:encoded>
@@ -156,6 +172,7 @@
       <link>https://arcraiderscommunity.com/transmission-received-frozen-trail-inbound</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/transmission-received-frozen-trail-inbound</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>Superseded — see the Frozen Trail dossier . Pendola Pass lands 8 October; First Look transmission .</description>
     </item>
     <item>
@@ -163,6 +180,7 @@
       <link>https://arcraiderscommunity.com/transmission-frozen-trail-first-look</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/transmission-frozen-trail-first-look</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/frozen-trail-pendola-pass.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The pre-launch view: what Embark announced ahead of 8 October — Pendola Pass, the Frigate, three new ARC and the PvE toggle test.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/img/frozen-trail-pendola-pass.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/frozen-trail-pendola-pass.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The pre-launch view: what Embark announced ahead of 8 October — Pendola Pass, the Frigate, three new ARC and the PvE toggle test.&lt;/p&gt;</content:encoded>
@@ -172,6 +190,7 @@
       <link>https://arcraiderscommunity.com/transmission-frozen-trail-briefing</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/transmission-frozen-trail-briefing</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/frozen-trail-frigate.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Back after a break? The ten changes that matter, a first hour on Pendola Pass, and this week’s dates.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/img/frozen-trail-frigate.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/img/frozen-trail-frigate.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Back after a break? The ten changes that matter, a first hour on Pendola Pass, and this week’s dates.&lt;/p&gt;</content:encoded>
@@ -181,6 +200,7 @@
       <link>https://arcraiderscommunity.com/live-update-1-45-0</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/live-update-1-45-0</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>ARC Raiders Live Update 1.45.0 (8 Sept 2026): Cred retires on 8 October, Ascending the Mountain, Expedition 5, the Hornet Hunter set, balance changes and fixes.</description>
     </item>
     <item>
@@ -188,6 +208,7 @@
       <link>https://arcraiderscommunity.com/intel/frozen-trail</link>
       <guid isPermaLink="true">https://arcraiderscommunity.com/intel/frozen-trail</guid>
       <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+      <dc:creator>arcraiderscommunity.com</dc:creator>
       <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/transmission-frozen-trail-first-look/img/frozen-trail-pendola-pass.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The launch reference: what shipped, what is still unconfirmed, and this week’s dates, each item labelled by how sure we are.&lt;/p&gt;</description>
       <media:content url="https://arcraiderscommunity.com/transmission-frozen-trail-first-look/img/frozen-trail-pendola-pass.webp" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/transmission-frozen-trail-first-look/img/frozen-trail-pendola-pass.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;The launch reference: what shipped, what is still unconfirmed, and this week’s dates, each item labelled by how sure we are.&lt;/p&gt;</content:encoded>
