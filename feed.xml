@@ -6,7 +6,16 @@
     <description>Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern.</description>
     <language>en</language>
     <ttl>30</ttl>
-    <lastBuildDate>Tue, 27 Oct 2026 10:46:07 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 16:19:34 GMT</lastBuildDate>
+    <item>
+      <title>Live Update 2.3.0</title>
+      <link>https://arcraiders.com/news/live-update-2-3-0</link>
+      <guid isPermaLink="true">https://arcraiders.com/news/live-update-2-3-0</guid>
+      <pubDate>Tue, 27 Oct 2026 10:19:33 GMT</pubDate>
+      <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ab89c46dd6bf132b53899a26c8c68e87e1046b7.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.3 is rolling out right now with the Noxious Set, a number of fixes and a new player project! Please restart the game to download. Since Frozen Trail…&lt;/p&gt;</description>
+      <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ab89c46dd6bf132b53899a26c8c68e87e1046b7.webp" medium="image" />
+      <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/5ab89c46dd6bf132b53899a26c8c68e87e1046b7.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Raiders! Update 2.3 is rolling out right now with the Noxious Set, a number of fixes and a new player project! Please restart the game to download. Since Frozen Trail…&lt;/p&gt;</content:encoded>
+    </item>
     <item>
       <title>Live Update 2.3.0</title>
       <link>https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114048305</link>
