@@ -6,7 +6,16 @@
     <description>Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern.</description>
     <language>en</language>
     <ttl>30</ttl>
-    <lastBuildDate>Tue, 27 Oct 2026 16:19:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 16:40:00 GMT</lastBuildDate>
+    <item>
+      <title>The ‘Contradas’ of Toledo: Who are they?</title>
+      <link>https://arcraiders.com/news/who-are-the-contradas-of-toledo</link>
+      <guid isPermaLink="true">https://arcraiders.com/news/who-are-the-contradas-of-toledo</guid>
+      <pubDate>Thu, 29 Oct 2026 12:39:59 GMT</pubDate>
+      <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/44d48089a663b0822990a0809fab75498cff83a4.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Every Contrada brings something crucial to the security and prosperity of Toledo. But with each neighborhood driven by fiercely conflicting values, managing these relationships is more important than ever.&lt;/p&gt;</description>
+      <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/44d48089a663b0822990a0809fab75498cff83a4.webp" medium="image" />
+      <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/44d48089a663b0822990a0809fab75498cff83a4.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Every Contrada brings something crucial to the security and prosperity of Toledo. But with each neighborhood driven by fiercely conflicting values, managing these relationships is more important than ever.&lt;/p&gt;</content:encoded>
+    </item>
     <item>
       <title>Live Update 2.3.0</title>
       <link>https://arcraiders.com/news/live-update-2-3-0</link>
