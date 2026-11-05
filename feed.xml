@@ -6,7 +6,7 @@
     <description>Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern.</description>
     <language>en</language>
     <ttl>30</ttl>
-    <lastBuildDate>Thu, 05 Nov 2026 13:14:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 17:39:08 GMT</lastBuildDate>
     <item>
       <title>Hotfix 2.4.1</title>
       <link>https://store.steampowered.com/news/app/1808500/view/1848664643341170</link>
@@ -15,6 +15,15 @@
       <description>&lt;p&gt;&lt;img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Steam 5 Nov 2026&lt;/p&gt;</description>
       <media:content url="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" medium="image" />
       <content:encoded>&lt;p&gt;&lt;img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Steam 5 Nov 2026&lt;/p&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Hotfix 2.4.1</title>
+      <link>https://arcraiders.com/news/hotfix-2-4-1</link>
+      <guid isPermaLink="true">https://arcraiders.com/news/hotfix-2-4-1</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/dde8f0f5738c96bbce184125b45d1e6170986a8d.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Embark Studios 5 Nov 2026&lt;/p&gt;</description>
+      <media:content url="https://arcraiderscommunity.com/wp-content/uploads/arc-news/dde8f0f5738c96bbce184125b45d1e6170986a8d.webp" medium="image" />
+      <content:encoded>&lt;p&gt;&lt;img src="https://arcraiderscommunity.com/wp-content/uploads/arc-news/dde8f0f5738c96bbce184125b45d1e6170986a8d.webp" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Embark Studios 5 Nov 2026&lt;/p&gt;</content:encoded>
     </item>
     <item>
       <title>Store Update 2.4.0</title>
