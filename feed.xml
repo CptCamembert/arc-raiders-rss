@@ -6,7 +6,16 @@
     <description>Offizielle ARC Raiders News, Steam-Updates und Community-Berichte mit Bildern.</description>
     <language>en</language>
     <ttl>30</ttl>
-    <lastBuildDate>Tue, 03 Nov 2026 15:38:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 13:14:42 GMT</lastBuildDate>
+    <item>
+      <title>Hotfix 2.4.1</title>
+      <link>https://store.steampowered.com/news/app/1808500/view/1848664643341170</link>
+      <guid isPermaLink="true">https://store.steampowered.com/news/app/1808500/view/1848664643341170</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;&lt;img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Steam 5 Nov 2026&lt;/p&gt;</description>
+      <media:content url="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" medium="image" />
+      <content:encoded>&lt;p&gt;&lt;img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/a602a7cbfa617d23b11c13aba324e8aa6f753269/capsule_616x353_alt_assets_9.jpg?t=1793881941" alt="" /&gt;&lt;/p&gt;&lt;p&gt;Steam 5 Nov 2026&lt;/p&gt;</content:encoded>
+    </item>
     <item>
       <title>Store Update 2.4.0</title>
       <link>https://store.steampowered.com/news/app/1808500/view/1847920302251347</link>
